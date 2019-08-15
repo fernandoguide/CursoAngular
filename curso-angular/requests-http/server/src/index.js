@@ -36,5 +36,5 @@ app.get('/downloadPDF', (req, res) => {
 app.use((err, req, res, next) => res.json({error: err.message}));
 
 app.listen(8000, () => {
-  console.log('Servidor iniciado na  porta 8000');
+  console.log('Servidor iniciado na porta 8000');
 })
