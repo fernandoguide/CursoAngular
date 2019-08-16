@@ -15,6 +15,9 @@
         <tr>
           <th>#</th>
           <th>Curso</th>
+          <th>Duração</th>
+          <th>Data de Inicio</th>
+          <th>Data de Termino</th>
           <th></th>
         </tr>
       </thead>
@@ -22,6 +25,10 @@
         <tr *ngFor="let curso of cursos">
           <td>{{ curso.id }}</td>
           <td>{{ curso.nome }}</td>
+          <td>{{ curso.duracao }}</td>
+          <td>{{ curso.dataInicio }}</td>
+          <td>{{ curso.dataTermino }}</td>
+
           
           <td>
             <span class="float-right">

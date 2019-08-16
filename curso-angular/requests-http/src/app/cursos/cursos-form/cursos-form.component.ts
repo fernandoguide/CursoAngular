@@ -58,7 +58,10 @@ export class CursosFormComponent implements OnInit {
 
     this.form = this.fb.group({
       id: [curso.id],
-      nome: [curso.nome, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]
+      nome: [curso.nome, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      duracao:[curso.duracao,[Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      dataInicio:[curso.dataInicio],
+      dataTermino:[curso.dataTermino]
     });
   }
 

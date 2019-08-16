@@ -1,6 +1,6 @@
 <form class="needs-validation" novalidate [formGroup]="form" style="padding-top: 10px">
   <div class="form-row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
       <label for="nome">Nome do Curso</label>
       <input
         type="text"
@@ -21,8 +21,61 @@
       </div>
     </div>
   </div>
+  <br>
+  <div class="form-row">
+    <div class="col-sm-4">
+      <label for="nome">Duração do Curso</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Duração do Curso"
+        formControlName="duracao"
+        [ngClass]="{ 'is-invalid': submitted && hasError('duracao')}"
+      />
+      <div class="invalid-feedback" *ngIf="hasError('duracao') && hasError('duracao')['required']" >
+        Por favor informe uma duracao para o curso.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('duracao') && hasError('duracao')['minlength']" >
+        Nome precisa ter no mínimo {{ hasError('duracao')['minlength'].requiredLength }} caracteres.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('duracao') && hasError('duracao')['maxlength']" >
+        Nome precisa ter no máximo {{ hasError('duracao')['maxlength'].requiredLength }} caracteres.
+      </div>
+    </div>
+  </div>
+  <br>
+<div class="form-row">
+  <div class="col-sm-4">
+    <label for="nome">Inicio do Curso</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nome"
+      placeholder="Inicio do Curso"
+      formControlName="dataInicio"
+      [ngClass]="{ 'is-invalid': submitted && hasError('dataInicio')}"
+    />
+  </div>
+</div>
+    <br>
+    <div class="form-row">
+      <div class="col-sm-4">
+        <label for="nome">Termino do Curso</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          placeholder="Termino do Curso"
+          formControlName="dataTermino"
+          [ngClass]="{ 'is-invalid': submitted && hasError('dataTermino')}"
+        />
+      </div>
+    </div>
   <div style="margin-top: 10px">
     <button type="sumit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
     <button type="button" class="btn btn-default" (click)="onCancel()">Cancelar</button>
   </div>
 </form>
+
+
