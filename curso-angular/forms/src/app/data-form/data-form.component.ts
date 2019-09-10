@@ -173,8 +173,8 @@ export class DataFormComponent extends BaseFormComponent implements OnInit {
         estado: dados.uf
       }
     });
-
-    this.formulario.get('nome').setValue('Loiane');
+    // popula apenas 1 campo expecifico por ex o nome toda vez q fizer a busca de uma cep
+    this.formulario.get('nome').setValue('Fernando');
 
     // console.log(form);
   }
